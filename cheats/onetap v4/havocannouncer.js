@@ -9,22 +9,19 @@ function announcer() {
     } 
 
     startTime = Globals.Realtime();
-    if (kills >= 5){
-
-    } else{
+    if (kills != 5){
         kills = kills + 1;
     }
     if (kills <= 5 && kills > 0){
         switch(kills){
-            case 1: {break;}
+            case 1: {Sound.Play("ot\\resources\\enemy_death.wav"); break;}
             case 2: {Sound.Play("ot\\resources\\doublekill.wav"); break;}
-            case 3: {Sound.Play("ot\\resources\\megakill.wav"); break;}
-            case 4: {Sound.Play("ot\\resources\\monsterkill.wav"); break;}
-            case 5: {Sound.Play("ot\\resources\\ultrakill.wav"); break;}
+            case 3: {Sound.Play("ot\\resources\\multi_kill.wav"); break;}
+            case 4: {Sound.Play("ot\\resources\\dominating.wav"); break;}
+            case 5: {Sound.Play("ot\\resources\\god_like.wav"); break;}
         }
     }
 }
-
 
 function resetKills(){
     kills = 0;
