@@ -1,1 +1,1 @@
-# csgo-addons
+# CSGO Additional Files
